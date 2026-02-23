@@ -28,7 +28,7 @@ This project implements a complete analysis pipeline for ttbar production events
 
 ## Installation
 
-### 1. Install ROOT Framework
+### 1. Install ROOT Framework - (IF YOU HAVE NOT ALREADY)
 
 ```bash
 # Download and install ROOT (example with v6.36)
@@ -121,7 +121,7 @@ cd run/
 ./run_all.sh
 ```
 
-This script processes:
+This script processes (for check purposes):
 - **PQCD LO** (100 TeV): 5M events, σ = 1.88467E+04 pb
 - **PQCD NLO** (100 TeV): 5M events, σ = 2.81E+04 pb  
 - **Black Hole** (n=6, M_D=4 TeV, M_BH=8 TeV): σ = 6.7979721E+02 pb
@@ -170,13 +170,12 @@ ttbar_BH_analysis/
 Standard event format for particle physics simulations. Each event contains:
 - Particle four-momenta
 - Particle species and status codes
-- Interaction weights and scales
 
-### Output: ROOT TTree
+### Output: ROOT TTree - This can be extended
 ROOT binary format containing:
 - Event selection flags
+- 4-momenta
 - Kinematic variables (pT, η, φ)
-- Invariant masses
 - Cross-section weights
 
 ## Compilation Details
@@ -195,21 +194,17 @@ Build artifacts:
 ## Physics Analysis
 
 ### Event Selection
-- Top quark pair reconstruction
-- Lepton isolation and identification
-- Jet clustering and b-tagging
-- Missing energy requirements
+- Top quark reconstruction
+- Multiplicity of top- Signal feature
 
+- 
 ### Theoretical Predictions
 - **PQCD LO/NLO:** Standard Model ttbar production
 - **Black Hole Models:** Extra-dimensional scenarios (Randall-Sundrum, ADD)
-- **Cross-section Weights:** Automatic normalization per dataset
 
 ### Output Variables
-- Reconstructed top mass (M_tt)
 - Top quark transverse momentum
 - Angular distributions
-- Missing transverse energy
 
 ## Troubleshooting
 
@@ -252,11 +247,6 @@ ldd ./source/top_inclusive_withBH_overlay
 ```
 
 ## Performance
-
-**Typical Performance:**
-- **Analysis Speed:** ~100k events/minute (single core)
-- **Memory Usage:** ~500 MB per analysis process
-- **5M Event Dataset:** ~50 minutes per dataset
 
 **Optimization Tips:**
 - Use parallel make: `make -j4`
