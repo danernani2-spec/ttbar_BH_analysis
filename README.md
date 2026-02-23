@@ -195,9 +195,9 @@ Build artifacts:
 
 ### Event Selection
 - Top quark reconstruction
-- Multiplicity of top- Signal feature
-
-- 
+- 1 (anti)top per event
+- Multiplicity of tops - Signal feature
+ 
 ### Theoretical Predictions
 - **PQCD LO/NLO:** Standard Model ttbar production
 - **Black Hole Models:** Extra-dimensional scenarios (Randall-Sundrum, ADD)
