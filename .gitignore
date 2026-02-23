@@ -1,0 +1,35 @@
+# Arquivos compilados
+*.o
+*.so
+*.a
+*.exe
+top_inclusive_withBH_overlay
+
+# Diretórios de build
+build/
+build-*/
+cmake-build-*/
+
+# Cache do CMake
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+*.cmake
+
+# Arquivos ROOT grandes (dados)
+*.root
+input_root/*.root
+input_lhe/*.lhe
+output/*.root
+
+# Arquivos temporários
+*~
+*.swp
+*.swo
+.DS_Store
+
+# IDEs
+.vscode/
+.idea/
+*.code-workspace
